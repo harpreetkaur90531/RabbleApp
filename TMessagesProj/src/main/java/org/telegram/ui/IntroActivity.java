@@ -18,6 +18,7 @@ import android.content.pm.ActivityInfo;
 import android.database.DataSetObserver;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -38,10 +39,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -83,7 +86,7 @@ import javax.microedition.khronos.egl.EGLSurface;
 import javax.microedition.khronos.opengles.GL10;
 
 public class IntroActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
-    private final static int ICON_WIDTH_DP = 200, ICON_HEIGHT_DP = 150;
+    private final static int ICON_WIDTH_DP = 180, ICON_HEIGHT_DP = 300;
 
     private final Object pagerHeaderTag = new Object(),
             pagerMessageTag = new Object();
@@ -148,6 +151,8 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
         scrollView.setFillViewport(true);
 
         RLottieImageView themeIconView = new RLottieImageView(context);
+        themeIconView.setColorFilter(ContextCompat.getColor(context, R.color.color_app_main), android.graphics.PorterDuff.Mode.MULTIPLY);
+
         FrameLayout themeFrameLayout = new FrameLayout(context);
         themeFrameLayout.addView(themeIconView, LayoutHelper.createFrame(28, 28, Gravity.CENTER));
 
@@ -187,8 +192,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
 
         darkThemeDrawable = new RLottieDrawable(R.raw.sun, String.valueOf(R.raw.sun), AndroidUtilities.dp(28), AndroidUtilities.dp(28), true, null);
         darkThemeDrawable.setPlayInDirectionOfCustomEndFrame(true);
-        darkThemeDrawable.beginApplyLayerColors();
-        darkThemeDrawable.commitApplyLayerColors();
+         darkThemeDrawable.setLayerColor("main",getContext().getResources().getColor(R.color.color_app_main));
 
         darkThemeDrawable.setCustomEndFrame(Theme.getCurrentTheme().isDark() ? darkThemeDrawable.getFramesCount() - 1 : 0);
         darkThemeDrawable.setCurrentFrame(Theme.getCurrentTheme().isDark() ? darkThemeDrawable.getFramesCount() - 1 : 0, false);
@@ -227,9 +231,11 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
         });
 
         frameLayout2 = new FrameLayout(context);
+        //TODO
+
         frameContainerView.addView(frameLayout2, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.LEFT | Gravity.TOP, 0, 78, 0, 0));
 
-        TextureView textureView = new TextureView(context);
+ /*       TextureView textureView = new TextureView(context);
         frameLayout2.addView(textureView, LayoutHelper.createFrame(ICON_WIDTH_DP, ICON_HEIGHT_DP, Gravity.CENTER));
         textureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() {
             @Override
@@ -273,11 +279,18 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
 
             }
         });
+*/
+
+        ImageView initialScreenImage = new ImageView(context);
+        initialScreenImage.setImageResource(R.drawable.intro_tg_plane);
+        frameLayout2 .addView(initialScreenImage, LayoutHelper.createFrame(ICON_WIDTH_DP, ICON_HEIGHT_DP, Gravity.CENTER));
+
 
         viewPager = new ViewPager(context);
         viewPager.setAdapter(new IntroAdapter());
         viewPager.setPageMargin(0);
         viewPager.setOffscreenPageLimit(1);
+
         frameContainerView.addView(viewPager, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.MATCH_PARENT));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -345,6 +358,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
         startMessagingButton.setGravity(Gravity.CENTER);
         startMessagingButton.setTypeface(AndroidUtilities.bold());
         startMessagingButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
+      //  startMessagingButton.setBackgroundColor(R.color.color_app_main);
         startMessagingButton.setPadding(AndroidUtilities.dp(34), 0, AndroidUtilities.dp(34), 0);
         frameContainerView.addView(startMessagingButton, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 50, Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 16, 0, 16, 76));
         startMessagingButton.setOnClickListener(view -> {
@@ -358,6 +372,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
         });
 
         bottomPages = new BottomPagesView(context, viewPager, 6);
+        bottomPages.setVisibility(View.INVISIBLE);
         frameContainerView.addView(bottomPages, LayoutHelper.createFrame(66, 5, Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, ICON_HEIGHT_DP + 200, 0, 0));
 
         switchLanguageTextView = new TextView(context);
@@ -771,12 +786,10 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             loadTexture(R.drawable.intro_tg_plane, 21);
             loadTexture(v -> {
                 Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-                paint.setColor(0xFF2CA5E0); // It's logo color, it should not be colored by the theme
+                paint.setColor(Color.WHITE); // It's logo color, it should not be colored by the theme
                 int size = AndroidUtilities.dp(ICON_HEIGHT_DP);
                 Bitmap bm = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
-                Canvas c = new Canvas(bm);
-                c.drawCircle(size / 2f, size / 2f, size / 2f, paint);
-                return bm;
+                 return bm;
             }, 22);
             loadTexture(telegramMaskProvider, 23);
 
@@ -945,8 +958,9 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
         fragmentView.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
         switchLanguageTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlueText4));
         startMessagingButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
-        startMessagingButton.setBackground(Theme.createSimpleSelectorRoundRectDrawable(AndroidUtilities.dp(6), Theme.getColor(Theme.key_changephoneinfo_image2), Theme.getColor(Theme.key_chats_actionPressedBackground)));
-        darkThemeDrawable.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_changephoneinfo_image2), PorterDuff.Mode.SRC_IN));
+       // startMessagingButton.setBackgroundColor(R.color.color_app_main);
+        startMessagingButton.setBackgroundColor(getContext().getResources().getColor(R.color.color_app_main));
+        darkThemeDrawable.setColorFilter(getContext().getResources().getColor(R.color.color_app_main), PorterDuff.Mode.SRC_IN);
         bottomPages.invalidate();
         if (fromTheme) {
             if (eglThread != null) {

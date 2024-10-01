@@ -262,12 +262,12 @@ public class DialogsBotsAdapter extends UniversalAdapter {
 //                String q = this.query.toLowerCase(), qT = AndroidUtilities.translitSafe(q);
 //                MessagesController.ChannelRecommendations recommendations = MessagesController.getInstance(currentAccount).getCachedChannelRecommendations(0);
 //                if (recommendations != null && !recommendations.chats.isEmpty()) {
-//                    for (TLRPC.Chat chat : recommendations.chats) {
+//                    for (TLRPC.java.Chat chat : recommendations.chats) {
 //                        if (chat == null)
 //                            continue;
 //                        if (!ChatObject.isChannelAndNotMegaGroup(chat))
 //                            continue;
-//                        TLRPC.Chat localChat = MessagesController.getInstance(currentAccount).getChat(chat.id);
+//                        TLRPC.java.Chat localChat = MessagesController.getInstance(currentAccount).getChat(chat.id);
 //                        if (!(ChatObject.isNotInChat(chat) && (localChat == null || ChatObject.isNotInChat(localChat))))
 //                            continue;
 //                        String t = chat.title.toLowerCase(), tT = AndroidUtilities.translitSafe(t);

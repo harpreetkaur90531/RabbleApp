@@ -1097,7 +1097,7 @@ public class StarsController {
             return null;
         }
 
-//        if (!(MessageObject.getMedia(messageObject) instanceof TLRPC.TL_messageMediaInvoice)) {
+//        if (!(MessageObject.getMedia(messageObject) instanceof TLRPC.java.TL_messageMediaInvoice)) {
 //            return;
 //        }
 

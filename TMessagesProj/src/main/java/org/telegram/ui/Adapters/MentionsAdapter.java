@@ -1244,7 +1244,7 @@ public class MentionsAdapter extends RecyclerListView.SelectionAdapter implement
             }
             if (searchInDailogs) {
                 ArrayList<TLRPC.Dialog> dialogs = MessagesController.getInstance(currentAccount).getAllDialogs();
-               // ArrayList<TLRPC.TL_contact> contacts = ContactsController.getInstance(currentAccount).contacts;
+               // ArrayList<TLRPC.java.TL_contact> contacts = ContactsController.getInstance(currentAccount).contacts;
                 for (int a = 0; a < dialogs.size(); a++) {
                     String username;
                     String firstName;

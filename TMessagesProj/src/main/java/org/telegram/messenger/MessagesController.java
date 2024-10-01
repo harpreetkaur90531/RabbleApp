@@ -7920,7 +7920,7 @@ public class MessagesController extends BaseController implements NotificationCe
 
             TLRPC.TL_photos_updateProfilePhoto req = new TLRPC.TL_photos_updateProfilePhoto();
             req.id = new TLRPC.TL_inputPhotoEmpty();
-       //     getUserConfig().getCurrentUser().photo = new TLRPC.TL_userProfilePhotoEmpty();
+       //     getUserConfig().getCurrentUser().photo = new TLRPC.java.TL_userProfilePhotoEmpty();
             TLRPC.User user = getUser(getUserConfig().getClientUserId());
             if (user == null) {
                 user = getUserConfig().getCurrentUser();
@@ -17676,47 +17676,47 @@ public class MessagesController extends BaseController implements NotificationCe
                 }
                 updatesOnMainThread.add(baseUpdate);
 //            } else if (
-//                baseUpdate instanceof TLRPC.TL_updateStickerSets ||
-//                baseUpdate instanceof TLRPC.TL_updateStickerSetsOrder ||
-//                baseUpdate instanceof TLRPC.TL_updateNewStickerSet ||
-//                baseUpdate instanceof TLRPC.TL_updateDraftMessage ||
-//                baseUpdate instanceof TLRPC.TL_updateMoveStickerSetToTop ||
-//                baseUpdate instanceof TLRPC.TL_updateSavedGifs ||
-//                baseUpdate instanceof TLRPC.TL_updateReadFeaturedStickers ||
-//                baseUpdate instanceof TLRPC.TL_updatePhoneCallSignalingData ||
-//                baseUpdate instanceof TLRPC.TL_updateBotCommands ||
-//                baseUpdate instanceof TLRPC.TL_updateGroupCall ||
-//                baseUpdate instanceof TLRPC.TL_updateReadFeaturedEmojiStickers ||
-//                baseUpdate instanceof TLRPC.TL_updateGroupCallParticipants ||
-//                baseUpdate instanceof TLRPC.TL_updatePhoneCall ||
-//                baseUpdate instanceof TLRPC.TL_updateRecentReactions ||
-//                baseUpdate instanceof TLRPC.TL_updateSavedReactionTags ||
-//                baseUpdate instanceof TLRPC.TL_updatePeerLocated ||
-//                baseUpdate instanceof TLRPC.TL_updateTheme ||
-//                baseUpdate instanceof TLRPC.TL_updateDialogFilter ||
-//                baseUpdate instanceof TLRPC.TL_updateDialogFilterOrder ||
-//                baseUpdate instanceof TLRPC.TL_updateDialogFilters ||
-//                baseUpdate instanceof TLRPC.TL_updateRecentEmojiStatuses ||
-//                baseUpdate instanceof TLRPC.TL_updateWebViewResultSent ||
-//                baseUpdate instanceof TLRPC.TL_updateAttachMenuBots ||
-//                baseUpdate instanceof TLRPC.TL_updateBotMenuButton ||
-//                baseUpdate instanceof TLRPC.TL_updatePeerHistoryTTL ||
-//                baseUpdate instanceof TLRPC.TL_updatePendingJoinRequests ||
-//                baseUpdate instanceof TLRPC.TL_updateSavedRingtones ||
-//                baseUpdate instanceof TLRPC.TL_updateTranscribedAudio ||
-//                baseUpdate instanceof TLRPC.TL_updateTranscribeAudio ||
-//                baseUpdate instanceof TLRPC.TL_updateChannelViewForumAsMessages ||
-//                baseUpdate instanceof TLRPC.TL_updatePinnedSavedDialogs ||
-//                baseUpdate instanceof TLRPC.TL_updateSavedDialogPinned ||
-//                baseUpdate instanceof TLRPC.TL_updateNewAuthorization ||
-//                baseUpdate instanceof TLRPC.TL_updateNotifySettings ||
+//                baseUpdate instanceof TLRPC.java.TL_updateStickerSets ||
+//                baseUpdate instanceof TLRPC.java.TL_updateStickerSetsOrder ||
+//                baseUpdate instanceof TLRPC.java.TL_updateNewStickerSet ||
+//                baseUpdate instanceof TLRPC.java.TL_updateDraftMessage ||
+//                baseUpdate instanceof TLRPC.java.TL_updateMoveStickerSetToTop ||
+//                baseUpdate instanceof TLRPC.java.TL_updateSavedGifs ||
+//                baseUpdate instanceof TLRPC.java.TL_updateReadFeaturedStickers ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePhoneCallSignalingData ||
+//                baseUpdate instanceof TLRPC.java.TL_updateBotCommands ||
+//                baseUpdate instanceof TLRPC.java.TL_updateGroupCall ||
+//                baseUpdate instanceof TLRPC.java.TL_updateReadFeaturedEmojiStickers ||
+//                baseUpdate instanceof TLRPC.java.TL_updateGroupCallParticipants ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePhoneCall ||
+//                baseUpdate instanceof TLRPC.java.TL_updateRecentReactions ||
+//                baseUpdate instanceof TLRPC.java.TL_updateSavedReactionTags ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePeerLocated ||
+//                baseUpdate instanceof TLRPC.java.TL_updateTheme ||
+//                baseUpdate instanceof TLRPC.java.TL_updateDialogFilter ||
+//                baseUpdate instanceof TLRPC.java.TL_updateDialogFilterOrder ||
+//                baseUpdate instanceof TLRPC.java.TL_updateDialogFilters ||
+//                baseUpdate instanceof TLRPC.java.TL_updateRecentEmojiStatuses ||
+//                baseUpdate instanceof TLRPC.java.TL_updateWebViewResultSent ||
+//                baseUpdate instanceof TLRPC.java.TL_updateAttachMenuBots ||
+//                baseUpdate instanceof TLRPC.java.TL_updateBotMenuButton ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePeerHistoryTTL ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePendingJoinRequests ||
+//                baseUpdate instanceof TLRPC.java.TL_updateSavedRingtones ||
+//                baseUpdate instanceof TLRPC.java.TL_updateTranscribedAudio ||
+//                baseUpdate instanceof TLRPC.java.TL_updateTranscribeAudio ||
+//                baseUpdate instanceof TLRPC.java.TL_updateChannelViewForumAsMessages ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePinnedSavedDialogs ||
+//                baseUpdate instanceof TLRPC.java.TL_updateSavedDialogPinned ||
+//                baseUpdate instanceof TLRPC.java.TL_updateNewAuthorization ||
+//                baseUpdate instanceof TLRPC.java.TL_updateNotifySettings ||
 //                baseUpdate instanceof TL_stories.TL_updateStoriesStealthMode ||
-//                baseUpdate instanceof TLRPC.TL_updateDialogPinned ||
-//                baseUpdate instanceof TLRPC.TL_updatePinnedDialogs ||
-//                baseUpdate instanceof TLRPC.TL_updatePrivacy ||
-//                baseUpdate instanceof TLRPC.TL_updateDialogUnreadMark ||
-//                baseUpdate instanceof TLRPC.TL_updateContactsReset ||
-//                baseUpdate instanceof TLRPC.TL_updateFavedStickers
+//                baseUpdate instanceof TLRPC.java.TL_updateDialogPinned ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePinnedDialogs ||
+//                baseUpdate instanceof TLRPC.java.TL_updatePrivacy ||
+//                baseUpdate instanceof TLRPC.java.TL_updateDialogUnreadMark ||
+//                baseUpdate instanceof TLRPC.java.TL_updateContactsReset ||
+//                baseUpdate instanceof TLRPC.java.TL_updateFavedStickers
 //            ) {
 //                if (updatesOnMainThread == null) {
 //                    updatesOnMainThread = new ArrayList<>();

@@ -516,7 +516,7 @@ public class WebInstantView {
         page.blocks.addAll(parsePageBlocks(url, content, page));
         if (page.blocks.isEmpty() || !(page.blocks.get(0) instanceof TLRPC.TL_pageBlockHeader)) {
 //            if (byline != null || publishedTime != null) {
-//                final TLRPC.TL_pageBlockAuthorDate authorDate = new TLRPC.TL_pageBlockAuthorDate();
+//                final TLRPC.java.TL_pageBlockAuthorDate authorDate = new TLRPC.java.TL_pageBlockAuthorDate();
 //                authorDate.author = trim(parseRichText(byline));
 //                page.blocks.add(0, authorDate);
 //            }

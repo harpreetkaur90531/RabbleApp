@@ -2915,8 +2915,8 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
 //                    return true;
 //                }
 //                if (parentFragment != null) {
-//                    TLRPC.Chat chat = parentFragment.getCurrentChat();
-//                    TLRPC.UserFull userFull = parentFragment.getCurrentUserInfo();
+//                    TLRPC.java.Chat chat = parentFragment.getCurrentChat();
+//                    TLRPC.java.UserFull userFull = parentFragment.getCurrentUserInfo();
 //                    if (chat != null && !(ChatObject.canSendVoice(chat) || (ChatObject.canSendRoundVideo(chat) && hasRecordVideo)) || userFull != null && userFull.voice_messages_forbidden) {
 //                        delegate.needShowMediaBanHint();
 //                        return true;
@@ -4416,7 +4416,7 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
 
 //        if (parentFragment != null && parentFragment.messagePreviewParams != null && parentFragment.messagePreviewParams.forwardMessages != null && parentFragment.messagePreviewParams.forwardMessages.messages != null && !parentFragment.messagePreviewParams.forwardMessages.messages.isEmpty()) {
 //            for (MessageObject msg : parentFragment.messagePreviewParams.forwardMessages.messages) {
-//                TLRPC.TL_message tlmsg = new TLRPC.TL_message();
+//                TLRPC.java.TL_message tlmsg = new TLRPC.java.TL_message();
 //                tlmsg.id = id++;
 //                tlmsg.flags = msg.messageOwner.flags;
 //                tlmsg.message = msg.messageOwner.message;
@@ -4425,13 +4425,13 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
 //                tlmsg.peer_id = MessagesController.getInstance(currentAccount).getPeer(dialog_id);
 //                tlmsg.out = true;
 //                tlmsg.grouped_id = msg.messageOwner.grouped_id;
-//                TLRPC.TL_messageFwdHeader fwd = new TLRPC.TL_messageFwdHeader();
+//                TLRPC.java.TL_messageFwdHeader fwd = new TLRPC.java.TL_messageFwdHeader();
 //                fwd.flags |= 1;
 //                fwd.date = tlmsg.date;
 //                tlmsg.date = ConnectionsManager.getInstance(currentAccount).getCurrentTime();
 //                fwd.from_id = msg.messageOwner.from_id;
 //                tlmsg.fwd_from = fwd;
-//                tlmsg.flags |= TLRPC.MESSAGE_FLAG_FWD;
+//                tlmsg.flags |= TLRPC.java.MESSAGE_FLAG_FWD;
 //                tlmsg.from_id = MessagesController.getInstance(currentAccount).getPeer(UserConfig.getInstance(currentAccount).getClientUserId());
 //                MessageObject fwdmsg = new MessageObject(currentAccount, tlmsg, true, false);
 //                fwdmsg.notime = true;

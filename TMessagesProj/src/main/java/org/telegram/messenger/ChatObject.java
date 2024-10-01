@@ -297,11 +297,11 @@ public class ChatObject {
 //            if (call == null || loadedRtmpStreamParticipant) {
 //                return;
 //            }
-//            TLRPC.TL_phone_getGroupCallStreamChannels getGroupCallStreamChannels = new TLRPC.TL_phone_getGroupCallStreamChannels();
+//            TLRPC.java.TL_phone_getGroupCallStreamChannels getGroupCallStreamChannels = new TLRPC.java.TL_phone_getGroupCallStreamChannels();
 //            getGroupCallStreamChannels.call = getInputGroupCall();
 //            currentAccount.getConnectionsManager().sendRequest(getGroupCallStreamChannels, (response, error, timestamp) -> {
-//                if (response instanceof TLRPC.TL_phone_groupCallStreamChannels) {
-//                    TLRPC.TL_phone_groupCallStreamChannels streamChannels = (TLRPC.TL_phone_groupCallStreamChannels) response;
+//                if (response instanceof TLRPC.java.TL_phone_groupCallStreamChannels) {
+//                    TLRPC.java.TL_phone_groupCallStreamChannels streamChannels = (TLRPC.java.TL_phone_groupCallStreamChannels) response;
 //                    createRtmpStreamParticipant(streamChannels.channels);
 //                    loadedRtmpStreamParticipant = true;
 //                }

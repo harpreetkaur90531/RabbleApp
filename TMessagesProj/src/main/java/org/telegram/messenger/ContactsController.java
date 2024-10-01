@@ -1289,7 +1289,7 @@ public class ContactsController extends BaseController {
                 if (!toImport.isEmpty()) {
                     if (BuildVars.LOGS_ENABLED) {
                         FileLog.e("start import contacts");
-                        /*for (TLRPC.TL_inputPhoneContact contact : toImport) {
+                        /*for (TLRPC.java.TL_inputPhoneContact contact : toImport) {
                             FileLog.e("add contact " + contact.first_name + " " + contact.last_name + " " + contact.phone);
                         }*/
                     }
@@ -1376,7 +1376,7 @@ public class ContactsController extends BaseController {
                                 }
 
                                 /*if (BuildVars.LOGS_ENABLED) {
-                                    for (TLRPC.User user : res.users) {
+                                    for (TLRPC.java.User user : res.users) {
                                         FileLog.e("received user " + user.first_name + " " + user.last_name + " " + user.phone);
                                     }
                                 }*/

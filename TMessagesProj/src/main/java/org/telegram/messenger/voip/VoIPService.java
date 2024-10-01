@@ -3558,15 +3558,15 @@ public class VoIPService extends Service implements SensorEventListener, AudioMa
 	private void onTgVoipPreStop() {
 		/*if(BuildConfig.DEBUG){
 			String debugLog=controller.getDebugLog();
-			TLRPC.TL_phone_saveCallDebug req=new TLRPC.TL_phone_saveCallDebug();
-			req.debug=new TLRPC.TL_dataJSON();
+			TLRPC.java.TL_phone_saveCallDebug req=new TLRPC.java.TL_phone_saveCallDebug();
+			req.debug=new TLRPC.java.TL_dataJSON();
 			req.debug.data=debugLog;
-			req.peer=new TLRPC.TL_inputPhoneCall();
+			req.peer=new TLRPC.java.TL_inputPhoneCall();
 			req.peer.access_hash=call.access_hash;
 			req.peer.id=call.id;
 			ConnectionsManager.getInstance(currentAccount).sendRequest(req, new RequestDelegate(){
 				@Override
-				public void run(TLObject response, TLRPC.TL_error error){
+				public void run(TLObject response, TLRPC.java.TL_error error){
                     if (BuildVars.LOGS_ENABLED) {
                         FileLog.d("Sent debug logs, response=" + response);
                     }

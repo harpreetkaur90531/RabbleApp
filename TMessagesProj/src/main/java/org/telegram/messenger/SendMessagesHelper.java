@@ -4017,7 +4017,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                         } else {
                             newMsg.post = true;
 //                            if (chat.signatures && !chat.signature_profiles) {
-//                                newMsg.from_id = new TLRPC.TL_peerUser();
+//                                newMsg.from_id = new TLRPC.java.TL_peerUser();
 //                                newMsg.from_id.user_id = myId;
 //                            }
                         }
@@ -8464,8 +8464,8 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                         } else {
                             /*if (!isEncrypted) {
                                 Object[] sentData = getMessagesStorage().getSentFile(info.searchImage.imageUrl, !isEncrypted ? 1 : 4);
-                                if (sentData != null && sentData[0] instanceof TLRPC.TL_document) {
-                                    document = (TLRPC.TL_document) sentData[0];
+                                if (sentData != null && sentData[0] instanceof TLRPC.java.TL_document) {
+                                    document = (TLRPC.java.TL_document) sentData[0];
                                     parentObject = (String) sentData[1];
                                 }
                             }*/
@@ -8569,7 +8569,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                             if (!isEncrypted && info.ttl == 0) {
                                 /*Object[] sentData = getMessagesStorage().getSentFile(info.searchImage.imageUrl, !isEncrypted ? 0 : 3);
                                 if (sentData != null) {
-                                    photo = (TLRPC.TL_photo) sentData[0];
+                                    photo = (TLRPC.java.TL_photo) sentData[0];
                                     parentObject = (String) sentData[1];
                                     ensureMediaThumbExists(currentAccount, photo, );
                                 }*/

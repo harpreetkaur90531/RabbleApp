@@ -166,7 +166,7 @@ public class GroupMedia {
 //            }
 //        }
 //        for (int i = 0; i < paidMedia.extended_media.size(); ++i) {
-//            final TLRPC.MessageExtendedMedia media = paidMedia.extended_media.get(i);
+//            final TLRPC.java.MessageExtendedMedia media = paidMedia.extended_media.get(i);
 //            final GroupedMessagePosition pos = layout.getPosition(media);
 //            boolean found = false;
 //            for (int j = 0; j < holders.size(); ++j) {

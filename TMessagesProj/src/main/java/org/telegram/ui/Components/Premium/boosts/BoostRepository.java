@@ -646,16 +646,16 @@ public class BoostRepository {
 //            AndroidUtilities.runOnUIThread(() -> onDone.run(Collections.emptyList()));
 //            return 0;
 //        }
-//        TLRPC.TL_contacts_search req = new TLRPC.TL_contacts_search();
+//        TLRPC.java.TL_contacts_search req = new TLRPC.java.TL_contacts_search();
 //        req.q = query;
 //        req.limit = 50;
 //        return connection.sendRequest(req, (response, error) -> {
-//            if (response instanceof TLRPC.TL_contacts_found) {
-//                TLRPC.TL_contacts_found res = (TLRPC.TL_contacts_found) response;
+//            if (response instanceof TLRPC.java.TL_contacts_found) {
+//                TLRPC.java.TL_contacts_found res = (TLRPC.java.TL_contacts_found) response;
 //                controller.putUsers(res.users, false);
-//                List<TLRPC.User> result = new ArrayList<>();
+//                List<TLRPC.java.User> result = new ArrayList<>();
 //                for (int a = 0; a < res.users.size(); a++) {
-//                    TLRPC.User user = res.users.get(a);
+//                    TLRPC.java.User user = res.users.get(a);
 //                    if (!user.self && !UserObject.isDeleted(user) && !user.bot && !UserObject.isService(user.id)) {
 //                        result.add(user);
 //                    }

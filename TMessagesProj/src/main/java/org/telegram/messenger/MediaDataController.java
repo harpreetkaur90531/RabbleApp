@@ -3341,7 +3341,7 @@ public class MediaDataController extends BaseController {
         if (messages_stickerSet == null) {
             return;
         }
-//        TLRPC.StickerSet stickerSet = messages_stickerSet.set;
+//        TLRPC.java.StickerSet stickerSet = messages_stickerSet.set;
 
         int type1 = TYPE_IMAGE;
         if (messages_stickerSet.set.masks) {
@@ -7199,7 +7199,7 @@ public class MediaDataController extends BaseController {
 //                        if (spansUrl[b] instanceof URLSpanReplacement || spansUrl[b] instanceof URLSpanUserMention) {
 //                            continue;
 //                        }
-//                        TLRPC.TL_messageEntityTextUrl entity = new TLRPC.TL_messageEntityTextUrl();
+//                        TLRPC.java.TL_messageEntityTextUrl entity = new TLRPC.java.TL_messageEntityTextUrl();
 //                        entity.offset = spannable.getSpanStart(spansUrl[b]);
 //                        entity.length = Math.min(spannable.getSpanEnd(spansUrl[b]), message[0].length()) - entity.offset;
 //                        entity.url = spansUrl[b].getURL();

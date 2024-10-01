@@ -4686,13 +4686,13 @@ public class MessagesStorage extends BaseController {
                 state = database.executeFast("SELECT m.data, m.replydata, m.group_id FROM messages_v2 m INNER JOIN tag_message_id t ON m.mid = t.mid WHERE m.uid = ? AND t.tag = ?" + (!TextUtils.isEmpty(query) ? " AND t.text LIKE '%' || ? || '%'" : "") + (topic_id != 0 ? " AND topic_id = ? "  : "") + " ORDER BY m.mid DESC LIMIT ? OFFSET ?");
 
                 ArrayList<TLRPC.User> users = new ArrayList<>();
-//                ArrayList<TLRPC.User> encUsers = new ArrayList<>();
+//                ArrayList<TLRPC.java.User> encUsers = new ArrayList<>();
                 ArrayList<TLRPC.Chat> chats = new ArrayList<>();
                 ArrayList<Long> animatedEmojiToLoad = new ArrayList<>();
                 ArrayList<Long> usersToLoad = new ArrayList<>();
                 ArrayList<Long> chatsToLoad = new ArrayList<>();
                 ArrayList<TLRPC.Document> animatedEmoji = new ArrayList<>();
-//                LongSparseArray<SparseArray<ArrayList<TLRPC.Message>>> replyMessageOwners = new LongSparseArray<>();
+//                LongSparseArray<SparseArray<ArrayList<TLRPC.java.Message>>> replyMessageOwners = new LongSparseArray<>();
 //                LongSparseArray<ArrayList<Integer>> dialogReplyMessagesIds = new LongSparseArray<>();
 
                 int pointer = 1;
@@ -7369,7 +7369,7 @@ public class MessagesStorage extends BaseController {
                 if (data != null) {
                     info = TLRPC.ChatFull.TLdeserialize(data, data.readInt32(false), false);
                     data.reuse();
-                    // legacy groups already contain participants_count in TLRPC.Chat and not need to load chatfull
+                    // legacy groups already contain participants_count in TLRPC.java.Chat and not need to load chatfull
                     if (info instanceof TLRPC.TL_channelFull) {
                         result.put(id, participants_count);
                     }

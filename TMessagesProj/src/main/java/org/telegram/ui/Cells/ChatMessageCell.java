@@ -2560,7 +2560,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                     }
 //                    else if (documentAttachType != DOCUMENT_ATTACH_TYPE_DOCUMENT && drawPhotoImage && photoImage.isInsideImage(x, y)) {
 //                        linkPreviewPressed = true;
-//                        TLRPC.WebPage webPage = MessageObject.getMedia(currentMessageObject.messageOwner).webpage;
+//                        TLRPC.java.WebPage webPage = MessageObject.getMedia(currentMessageObject.messageOwner).webpage;
 //                        if (documentAttachType == DOCUMENT_ATTACH_TYPE_GIF && buttonState == -1 && SharedConfig.isAutoplayGifs() && (photoImage.getAnimation() == null || !TextUtils.isEmpty(webPage.embed_url))) {
 //                            linkPreviewPressed = false;
 //                            return false;
@@ -9097,8 +9097,8 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                             autoPlayingMedia = true;
                         }
                     }
-//                    if (autoPlayingMedia && messageObject.type == MessageObject.TYPE_STORY && MessageObject.getMedia(messageObject) instanceof TLRPC.TL_messageMediaStory) {
-//                        TLRPC.TL_messageMediaStory mediaStory = (TLRPC.TL_messageMediaStory) MessageObject.getMedia(messageObject);
+//                    if (autoPlayingMedia && messageObject.type == MessageObject.TYPE_STORY && MessageObject.getMedia(messageObject) instanceof TLRPC.java.TL_messageMediaStory) {
+//                        TLRPC.java.TL_messageMediaStory mediaStory = (TLRPC.java.TL_messageMediaStory) MessageObject.getMedia(messageObject);
 //                        TL_stories.StoryItem storyItem = mediaStory.storyItem;
 //                        if (storyItem == null || !storyItem.isPublic) {
 //                            autoPlayingMedia = false;

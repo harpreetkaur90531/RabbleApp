@@ -207,10 +207,10 @@ public class OpeningHoursActivity extends BaseFragment implements NotificationCe
 //        Collections.sort(array, (a, b) -> a.start_minute - b.start_minute);
 //        for (int i = 0; i < array.size() - 1; ++i) {
 //            if (i + 1 >= array.size()) continue;
-//            TLRPC.TL_businessWeeklyOpen weekly = array.get(i);
-//            TLRPC.TL_businessWeeklyOpen nextWeekly = array.get(i + 1);
+//            TLRPC.java.TL_businessWeeklyOpen weekly = array.get(i);
+//            TLRPC.java.TL_businessWeeklyOpen nextWeekly = array.get(i + 1);
 //            if (weekly.end_minute + 1 >= nextWeekly.start_minute) {
-//                TLRPC.TL_businessWeeklyOpen newWeekly = new TLRPC.TL_businessWeeklyOpen();
+//                TLRPC.java.TL_businessWeeklyOpen newWeekly = new TLRPC.java.TL_businessWeeklyOpen();
 //                newWeekly.start_minute = weekly.start_minute;
 //                newWeekly.end_minute = nextWeekly.end_minute;
 //                array.set(i, newWeekly);
@@ -632,7 +632,7 @@ public class OpeningHoursActivity extends BaseFragment implements NotificationCe
 //            listView.setOnItemClickListener((view, position) -> {
 //                position -= 2;
 //                TimezonesController timezonesController = TimezonesController.getInstance(currentAccount);
-//                ArrayList<TLRPC.TL_timezone> timezones = timezonesController.getTimezones();
+//                ArrayList<TLRPC.java.TL_timezone> timezones = timezonesController.getTimezones();
 //                if (position >= 0 && position < timezones.size()) {
 //                    if (whenSelectedTimezone != null) {
 //                        whenSelectedTimezone.run(timezones.get(position).id);
@@ -656,7 +656,7 @@ public class OpeningHoursActivity extends BaseFragment implements NotificationCe
 //            items.add(UItem.asHeader(getString(R.string.BusinessHoursTimezonePicker)));
 //
 //            TimezonesController timezonesController = TimezonesController.getInstance(currentAccount);
-//            ArrayList<TLRPC.TL_timezone> timezones = timezonesController.getTimezones();
+//            ArrayList<TLRPC.java.TL_timezone> timezones = timezonesController.getTimezones();
 //            for (int i = 0; i < timezones.size(); ++i) {
 //                items.add(UItem.asCheck(i, timezonesController.getTimezoneName(timezones.get(i), true)).setChecked(TextUtils.equals(currentTimezoneId, timezones.get(i).id)));
 //            }

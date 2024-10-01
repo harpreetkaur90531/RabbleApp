@@ -751,6 +751,7 @@ public abstract class BaseFragment {
         if (dialog == null || parentLayout == null || parentLayout.isTransitionAnimationInProgress() || parentLayout.isSwipeInProgress() || !allowInTransition && parentLayout.checkTransitionAnimation()) {
             return null;
         }
+
         if (sheetsStack != null) {
             for (int i = sheetsStack.size() - 1; i >= 0; --i) {
                 if (sheetsStack.get(i).isShown()) {

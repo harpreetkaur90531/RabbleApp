@@ -3592,7 +3592,7 @@ public class TopicsFragment extends BaseFragment implements NotificationCenter.N
 //            } else {
 //                req.offset_rate = 0;
 //                req.offset_id = 0;
-//                req.offset_peer = new TLRPC.TL_inputPeerEmpty();
+//                req.offset_peer = new TLRPC.java.TL_inputPeerEmpty();
 //            }
             ConnectionsManager.getInstance(currentAccount).sendRequest(req, (response, error) -> AndroidUtilities.runOnUIThread(() -> {
                 if (searchString.equals(this.searchString)) {

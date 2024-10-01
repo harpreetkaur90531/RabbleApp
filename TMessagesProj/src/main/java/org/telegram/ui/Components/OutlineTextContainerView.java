@@ -17,6 +17,7 @@ import androidx.dynamicanimation.animation.SpringAnimation;
 import androidx.dynamicanimation.animation.SpringForce;
 
 import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger.R;
 import org.telegram.ui.ActionBar.Theme;
 
 public class OutlineTextContainerView extends FrameLayout {
@@ -113,13 +114,14 @@ public class OutlineTextContainerView extends FrameLayout {
     }
 
     private void setColor(int color) {
-        outlinePaint.setColor(color);
+        outlinePaint.setColor(getResources().getColor(R.color.color_app_main));
         invalidate();
     }
 
     public void updateColor() {
         int textSelectionColor = ColorUtils.blendARGB(Theme.getColor(Theme.key_windowBackgroundWhiteHintText, resourcesProvider), Theme.getColor(Theme.key_windowBackgroundWhiteValueText, resourcesProvider), forceUseCenter && !forceForceUseCenter ? 0f : titleProgress);
-        textPaint.setColor(ColorUtils.blendARGB(textSelectionColor, Theme.getColor(Theme.key_text_RedBold, resourcesProvider), errorProgress));
+       // textPaint.setColor(ColorUtils.blendARGB(textSelectionColor, Theme.getColor(Theme.key_text_RedBold, resourcesProvider), errorProgress));
+        textPaint.setColor(getResources().getColor(R.color.color_app_main));
         int selectionColor = ColorUtils.blendARGB(Theme.getColor(Theme.key_windowBackgroundWhiteInputField, resourcesProvider), Theme.getColor(Theme.key_windowBackgroundWhiteInputFieldActivated, resourcesProvider), forceUseCenter && !forceForceUseCenter ? 0f : selectionProgress);
         setColor(ColorUtils.blendARGB(selectionColor, Theme.getColor(Theme.key_text_RedBold, resourcesProvider), errorProgress));
     }

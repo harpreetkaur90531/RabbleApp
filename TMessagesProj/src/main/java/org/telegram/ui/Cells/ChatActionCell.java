@@ -1057,14 +1057,14 @@ public class ChatActionCell extends BaseCell implements DownloadController.FileD
                 }
             } else if (url.startsWith("game")) {
                 delegate.didPressReplyMessage(this, currentMessageObject.getReplyMsgId());
-                /*TLRPC.KeyboardButton gameButton = null;
+                /*TLRPC.java.KeyboardButton gameButton = null;
                 MessageObject messageObject = currentMessageObject.replyMessageObject;
                 if (messageObject != null && messageObject.messageOwner.reply_markup != null) {
                     for (int a = 0; a < messageObject.messageOwner.reply_markup.rows.size(); a++) {
-                        TLRPC.TL_keyboardButtonRow row = messageObject.messageOwner.reply_markup.rows.get(a);
+                        TLRPC.java.TL_keyboardButtonRow row = messageObject.messageOwner.reply_markup.rows.get(a);
                         for (int b = 0; b < row.buttons.size(); b++) {
-                            TLRPC.KeyboardButton button = row.buttons.get(b);
-                            if (button instanceof TLRPC.TL_keyboardButtonGame && button.game_id == currentMessageObject.messageOwner.action.game_id) {
+                            TLRPC.java.KeyboardButton button = row.buttons.get(b);
+                            if (button instanceof TLRPC.java.TL_keyboardButtonGame && button.game_id == currentMessageObject.messageOwner.action.game_id) {
                                 gameButton = button;
                                 break;
                             }

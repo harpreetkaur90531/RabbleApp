@@ -1307,13 +1307,13 @@ public class SecretMediaViewer implements NotificationCenter.NotificationCenterD
 //                        }
 //
 //                        if (DialogObject.isChatDialog(dialogId)) {
-//                            TLRPC.Chat currentChat = MessagesController.getInstance(currentAccount).getChat(-dialogId);
+//                            TLRPC.java.Chat currentChat = MessagesController.getInstance(currentAccount).getChat(-dialogId);
 //                            String username = ChatObject.getPublicUsername(currentChat);
 //                            if (username != null) {
 //                                url1 = "https://t.me/" + username + "/" + messageId + "?t=" + finalTimestamp;
 //                            }
 //                        } else {
-//                            TLRPC.User user = MessagesController.getInstance(currentAccount).getUser(dialogId);
+//                            TLRPC.java.User user = MessagesController.getInstance(currentAccount).getUser(dialogId);
 //                            String username = UserObject.getPublicUsername(user);
 //                            if (user != null && username != null) {
 //                                url1 = "https://t.me/" + username + "/" + messageId + "?t=" + finalTimestamp;

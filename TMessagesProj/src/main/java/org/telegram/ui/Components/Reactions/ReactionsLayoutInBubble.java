@@ -1413,8 +1413,8 @@ public class ReactionsLayoutInBubble {
                     return o2.realCount - o1.realCount;
                 }
             }
-//            TLRPC.TL_availableReaction availableReaction1 = MediaDataController.getInstance(currentAccount).getReactionsMap().get(o1.reaction);
-//            TLRPC.TL_availableReaction availableReaction2 = MediaDataController.getInstance(currentAccount).getReactionsMap().get(o2.reaction);
+//            TLRPC.java.TL_availableReaction availableReaction1 = MediaDataController.getInstance(currentAccount).getReactionsMap().get(o1.reaction);
+//            TLRPC.java.TL_availableReaction availableReaction2 = MediaDataController.getInstance(currentAccount).getReactionsMap().get(o2.reaction);
 //            if (availableReaction1 != null && availableReaction2 != null) {
 //                return availableReaction1.positionInList - availableReaction2.positionInList;
 //            }

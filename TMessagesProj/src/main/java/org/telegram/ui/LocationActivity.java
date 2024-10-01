@@ -1769,7 +1769,7 @@ public class LocationActivity extends BaseFragment implements NotificationCenter
                     req.media.flags |= 2;
                     if (info.messageObject != null && info.messageObject.messageOwner != null && info.messageObject.messageOwner.media != null) {
                         info.messageObject.messageOwner.media.period = info.period;
-//                        ArrayList<TLRPC.Message> messages = new ArrayList<>();
+//                        ArrayList<TLRPC.java.Message> messages = new ArrayList<>();
 //                        messages.add(info.messageObject.messageOwner);
                         getMessagesStorage().replaceMessageIfExists(info.messageObject.messageOwner, null, null, true);
                     }

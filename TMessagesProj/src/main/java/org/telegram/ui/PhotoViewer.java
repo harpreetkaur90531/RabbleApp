@@ -4236,7 +4236,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
 
             if (currentMessageObject != null) {
                 isVideo = currentMessageObject.isVideo();
-                        /*if (currentMessageObject.messageOwner.media instanceof TLRPC.TL_messageMediaWebPage) {
+                        /*if (currentMessageObject.messageOwner.media instanceof TLRPC.java.TL_messageMediaWebPage) {
                             AndroidUtilities.openUrl(parentActivity, currentMessageObject.messageOwner.media.webpage.url);
                             return;
                         }*/
@@ -9799,7 +9799,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
         } else if (object instanceof MediaController.PhotoEntry) {
             caption = ((MediaController.PhotoEntry) object).caption;
         } else if (object instanceof TLRPC.BotInlineResult) {
-            //caption = ((TLRPC.BotInlineResult) object).send_message.caption;
+            //caption = ((TLRPC.java.BotInlineResult) object).send_message.caption;
         } else if (object instanceof MediaController.SearchImage) {
             caption = ((MediaController.SearchImage) object).caption;
         }

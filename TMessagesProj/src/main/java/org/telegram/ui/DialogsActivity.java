@@ -11231,13 +11231,13 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             if (viewPages[b].getVisibility() != View.VISIBLE || viewPages[b].dialogsAdapter.getDialogsListIsFrozen()) {
                 continue;
             }
-//            ArrayList<TLRPC.Dialog> dialogs = getDialogsArray(currentAccount, viewPages[b].dialogsType, folderId, false);
+//            ArrayList<TLRPC.java.Dialog> dialogs = getDialogsArray(currentAccount, viewPages[b].dialogsType, folderId, false);
 //            int count = viewPages[b].listView.getChildCount();
 //            for (int a = 0; a < count; a++) {
 //                View child = viewPages[b].listView.getChildAt(a);
 //                if (child instanceof DialogCell) {
 //                    DialogCell dialogCell = (DialogCell) child;
-//                    TLRPC.Dialog dialog = getMessagesController().dialogs_dict.get(dialogCell.getDialogId());
+//                    TLRPC.java.Dialog dialog = getMessagesController().dialogs_dict.get(dialogCell.getDialogId());
 //                    if (dialog == null) {
 //                        continue;
 //                    }

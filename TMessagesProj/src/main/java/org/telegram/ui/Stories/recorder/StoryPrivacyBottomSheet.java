@@ -4259,7 +4259,7 @@ public class StoryPrivacyBottomSheet extends BottomSheet implements Notification
 //
 //        long peerId = MessagesController.getInstance(currentAccount).getMainSettings().getLong("story_sendas", 0L);
 //        if (peerId != 0) {
-//            selectedPeer = new TLRPC.TL_inputPeerChannel();
+//            selectedPeer = new TLRPC.java.TL_inputPeerChannel();
 //            selectedPeer.channel_id = peerId;
 //        }
     }
@@ -4287,7 +4287,7 @@ public class StoryPrivacyBottomSheet extends BottomSheet implements Notification
             .putString("story_prv_excluded", TextUtils.join(",", excludedContacts))
             .putBoolean("story_noforwards", !allowScreenshots)
             .putBoolean("story_keep", keepOnMyPage)
-//            .putLong("story_sendas", selectedPeer instanceof TLRPC.TL_inputPeerChannel ? selectedPeer.channel_id : 0)
+//            .putLong("story_sendas", selectedPeer instanceof TLRPC.java.TL_inputPeerChannel ? selectedPeer.channel_id : 0)
             .apply();
     }
 

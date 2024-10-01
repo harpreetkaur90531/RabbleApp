@@ -7037,7 +7037,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 //                            if (unlock) {
 //                                openPremiumAnimatedEmojiFeature();
 //                            } else {
-//                                TLRPC.TL_messages_stickerSet stickerSet = MediaDataController.getInstance(currentAccount).getStickerSetById(expandPack.set.id);
+//                                TLRPC.java.TL_messages_stickerSet stickerSet = MediaDataController.getInstance(currentAccount).getStickerSetById(expandPack.set.id);
 //                                if (stickerSet == null || stickerSet.set == null) {
 //                                    toInstall.put(expandPack.set.id, newPack -> {
 //                                        if (newPack == null) {
@@ -7048,7 +7048,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 //                                            expandButton.updateInstall(true, true);
 //                                        });
 //                                    });
-//                                    TLRPC.TL_inputStickerSetID inputStickerSetID = new TLRPC.TL_inputStickerSetID();
+//                                    TLRPC.java.TL_inputStickerSetID inputStickerSetID = new TLRPC.java.TL_inputStickerSetID();
 //                                    inputStickerSetID.id = expandPack.set.id;
 //                                    inputStickerSetID.access_hash = expandPack.set.access_hash;
 //                                    MediaDataController.getInstance(currentAccount).getStickerSet(inputStickerSetID, false);
